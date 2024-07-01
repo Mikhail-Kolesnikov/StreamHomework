@@ -17,17 +17,16 @@ public class HomeworkStrings {
                 "Что похабник я и скандалист.");
         List<Integer> result = strings.stream()
                 .map(str -> str.length())
-                .filter(integer -> integer <= 15)
-                        .collect(Collectors.toList());
-
-
-
-
+                .filter(integer -> integer <= 5)
+                .toList();
 
         System.out.println(result);
+        String longestString = strings.stream()
+                .max(Comparator.comparingInt(str -> strings.size()))
+                .orElse("Not found");
+        System.out.println(longestString);
 
         //                .max(Comparator.comparingInt();
-
 
 
     }
