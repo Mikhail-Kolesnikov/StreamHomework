@@ -21,6 +21,9 @@ public class HomeworkNumbers {
             list.add(random.nextInt(1, 1000));
 
         }
+        System.out.println(list);
+
+
         Optional<Integer> result = list.stream()
                 .map(x -> x + 15)
                 .filter(x -> x >= 50)
