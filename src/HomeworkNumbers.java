@@ -15,19 +15,28 @@ public class HomeworkNumbers {
 
         Random random = new Random();
         List<Integer> list = new ArrayList<>();
-        list.add(random.nextInt(1,100));
+        for (int i = 0; i < 100; i++) {
+
+
+            list.add(random.nextInt(1, 1000));
+
+        }
         Optional<Integer> result = list.stream()
                 .map(x -> x + 15)
                 .filter(x -> x >= 50)
                 .reduce((x, y) -> x + y);
+            System.out.println(result.get());
 
-        System.out.println(result.get());
+
+        }
+
+
 
 
     }
 
 
-}
+
 
 
 
