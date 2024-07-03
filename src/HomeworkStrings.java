@@ -11,13 +11,13 @@ public class HomeworkStrings {
         //        //2.3 Найдите самую длинную строку
 
         List<String> strings = new ArrayList<>();
-        strings.add("Мне осталась одна забава:" +
-                "Пальцы в рот — и веселый свист." +
-                "Прокатилась дурная слава," +
-                "Что похабник я и скандалист.");
+        strings.add("Мне осталась одна забава:");
+        strings.add("Пальцы в рот — и веселый свист.");
+        strings.add("Прокатилась дурная слава,");
+        strings.add("Что похабник я и скандалист.");
         List<Integer> result = strings.stream()
                 .map(str -> str.length())
-                .filter(integer -> integer <= 5)
+                .filter(integer -> integer <= 25)
                 .toList();
 
         System.out.println(result);
